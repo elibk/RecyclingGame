@@ -22,11 +22,12 @@
         self.endGame = function endGame(score) {
             scoreManager.updateScores(score);
             scoreManager.displayScoreBoard();
+            document.getElementById('pause').style.display = 'none';
         };
 
         self.play = function play() {
             trashGenerator.clearOldTrash();
-            trashGenerator.addTrash(6);
+            trashGenerator.addTrash(5);
             
             timer.setTimer();
         };
